@@ -1,0 +1,34 @@
+﻿<Controls:MetroWindow x:Class="Sapper.View.Begin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Новая Игра" Height="150" Width="300" ResizeMode="NoResize" Closed="MetroWindow_Closed" 
+           DataContext="{Binding Source={StaticResource Locator}, Path=Begin}">
+    <Grid>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Controls:NumericUpDown Value="{Binding row}" IsEnabled="True"
+                                        Minimum="10"
+                                        TextAlignment="Left"
+                                        Margin="50,10,0,10"
+                                        Width="100"
+                                        IsReadOnly="{Binding IsChecked, ElementName=ReadOnlyCheck, Mode=TwoWay}"
+                                        HasDecimals="{Binding IsChecked, ElementName=HasDecimalsCheckBox, Mode=TwoWay}"
+                                        Maximum="100" />
+                <Controls:NumericUpDown Value="{Binding column}" IsEnabled="True"
+                                        TextAlignment="Left"
+                                        Margin="20,10,0,10"
+                                        Width="100"
+                                        Minimum="10"
+                                        IsReadOnly="{Binding IsChecked, ElementName=ReadOnlyCheck, Mode=TwoWay}"
+                                        HasDecimals="{Binding IsChecked, ElementName=HasDecimalsCheckBox, Mode=TwoWay}"
+                                        Maximum="100" />
+            </StackPanel>
+            <Button Content="Начать" 
+                    Margin="10,10,0,10" 
+                    HorizontalAlignment="Center"
+                    Width="169"
+                    Command="{Binding newGame}"/>
+        </StackPanel>
+    </Grid>
+</Controls:MetroWindow>

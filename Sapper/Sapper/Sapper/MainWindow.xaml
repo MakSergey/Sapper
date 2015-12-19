@@ -1,0 +1,30 @@
+﻿<Controls:MetroWindow x:Name="windows" x:Class="Sapper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"           
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Сапер" SizeToContent="WidthAndHeight" ResizeMode="NoResize"
+         DataContext="{Binding Source={StaticResource Locator}, Path=Main}" >
+    
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <DockPanel VerticalAlignment="Top" Height="30">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Новая Игра" 
+                    HorizontalAlignment="Center"
+                    Width="75" Command="{Binding OpenBegin}"/>
+                    <Button Content="Справка"  
+                    HorizontalAlignment="Center"
+                    Width="65" Command="{Binding OpenHelp}"/>
+                    <Button Content="Поделиться"  
+                    HorizontalAlignment="Center"
+                    Command="{Binding OpenСarrier}" 
+                    Width="78" />
+                </StackPanel>
+            </DockPanel>
+            <UniformGrid Rows="{Binding row}" Columns="{Binding column}" x:Name="GameField">
+                
+            </UniformGrid >
+        </StackPanel>
+    </Grid>
+
+</Controls:MetroWindow>

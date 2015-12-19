@@ -1,0 +1,40 @@
+﻿<Controls:MetroWindow x:Class="Sapper.View.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Справка" Height="500" Width="300" ResizeMode="NoResize" Closed="MetroWindow_Closed">
+    <Grid>
+        <FlowDocumentScrollViewer>
+            <FlowDocument>
+                <Paragraph FontSize="14" TextAlignment="Left">
+                    <Bold>Сапер: правила и общие сведения
+                    </Bold>
+                    <LineBreak></LineBreak>
+                    <Bold>Цель игры
+                    </Bold>
+                    <LineBreak></LineBreak>
+                    Найти пустые ячейки, но не трогать ячейки, содержащие мины. 
+                    Чем быстрее вы очистите всю доску, тем лучше будет результат.
+                    Правила игры
+                    <LineBreak></LineBreak>
+                    •	Если открыта ячейка с миной, игра проиграна.
+                    <LineBreak></LineBreak>
+                    •	Если открыта пустая ячейка, игра продолжается.
+                    <LineBreak></LineBreak>
+                    •	Если в ячейке указано число, оно показывает, сколько мин скрыто в восьми ячейках вокруг данной.
+                    Это число помогает понять, где находятся безопасные ячейки.
+                    <LineBreak></LineBreak>
+                        <Bold>Советы и подсказки
+                        </Bold>
+                    <LineBreak></LineBreak>
+                    Отмечайте ячейки с минами. Если ячейка предположительно содержит мину, щелкните ее правой кнопкой 
+                    мыши. Ячейка будет помечена флажком. Изучите возможные сочетания. Если три ячейки в ряду содержат
+                    числа 2-3-2, вы можете предположить, что вдоль этих ячеек за пределами этого ряда расположены три
+                    мины. Если ячейка содержит число 8, значит все ячейки вокруг нее содержат мины. Старайтесь открывать
+                    закрытые области. Не уверены, какую ячейку открыть дальше? Попробуйте открыть другую часть поля. 
+                    Лучше открывать еще не исследованные области, чем те, где могут находиться мины.
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Controls:MetroWindow>
